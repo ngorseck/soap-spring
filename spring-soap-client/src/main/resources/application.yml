@@ -1,0 +1,15 @@
+server:
+  port: 9090
+ws:
+  location: http://localhost:8080/ws
+  security:
+    password:
+      policy: classpath:passwordSecurityPolicy.xml
+    certificate:
+      policy: classpath:certificateSecurityPolicy.xml
+      keyStore: classpath:keyStore.jks
+      password: changeit
+      alias: thinktech
+logging:
+  level:
+    org.springframework.ws: TRACE
